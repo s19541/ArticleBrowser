@@ -13,15 +13,13 @@
         android:layout_marginEnd="8dp"
         android:text="Not logged"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintBottom_toTopOf="@+id/dishList"
-        app:layout_constraintEnd_toStartOf="@+id/signInButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/signInButton"
+        app:layout_constraintEnd_toStartOf="@+id/signInButton" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/dishList"
+        android:id="@+id/articleList"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,4 +35,14 @@
         android:text="Sign in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/favouritesButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#00FFFFFF"
+        android:onClick="showFavourites"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_off" />
 </androidx.constraintlayout.widget.ConstraintLayout>

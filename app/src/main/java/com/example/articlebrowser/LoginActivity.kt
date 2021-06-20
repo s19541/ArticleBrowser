@@ -43,21 +43,6 @@ class LoginActivity : AppCompatActivity() {
         if(binding.email.text.toString() == "" || binding.password.text.toString() == "")
             Toast.makeText(this, "Wrong credentials", Toast.LENGTH_SHORT).show()
         else {
-            println("kd")
-            val database = FirebaseDatabase.getInstance()
-            println(database)
-            try {
-                //val myRef = database.getReference("https://articlebrowser-default-rtdb.europe-west1.firebaseio.com")
-
-                val myRef = database.getReference("message")
-                println(myRef)
-
-                myRef.setValue("Hello, World!")
-                println(myRef)
-            }catch(e: Exception){
-                e.printStackTrace()
-            }
-            println("jd")
             auth.signInWithEmailAndPassword(
                 binding.email.text.toString(),
                 binding.password.text.toString()
